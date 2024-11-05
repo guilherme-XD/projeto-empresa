@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+:root {
+    --color-b1: #003366;
+    --color-b2: rgba(0, 51, 102, 0.5);
+    --color-g: #a0a0a0;
+    --color-o: #ffa500;
+
+    --font-h1: "Turret Road", sans-serif;
+    --font-p: arial, verdana, helvetica, sans-serif;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--color-b2);
+}
+
+header {
+    position: relative;
+    background-color: var(--color-b1);
+    color: white;
+    height: 100px;
+    text-align: center;
+    font-family: var(--font-h1);
+    font-size: 1em;
+}
+
+header > div.h-empresa {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+nav {
+    background-color: var(--color-b1);
+    color: white;
+    font-family: var(--font-p);
+    padding: 10px;
+}
+
+nav a {
+    padding: 7px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: var(--color-o);
+    background-color: var(--color-b2);
+    transition-duration: 0.2s;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 260px;
+    max-width: 900px;
+    margin: auto;
+}
+
+main h1 {
+    margin: 10px;
+    padding: 10px;
+    font-family: var(--font-p);
+    color: var(--color-o);
+}
+
+main p {
+    margin: 10px;
+    padding: 10px;
+    font-family: var(--font-p);
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    font-family: var(--font-p);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-o);
+}
