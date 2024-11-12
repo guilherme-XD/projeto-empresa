@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
 
 :root {
-    --color-b1: #003366;
+    --color-b0: rgb(0, 37, 75);
+    --color-b1: rgb(0, 51, 102);
     --color-b2: rgba(0, 51, 102, 0.5);
     --color-g: #a0a0a0;
     --color-o: #ffa500;
@@ -24,7 +25,7 @@ body {
 
 header {
     position: relative;
-    background-color: var(--color-b1);
+    background-image: linear-gradient(to bottom, var(--color-b0), var(--color-b1));
     color: white;
     height: 100px;
     text-align: center;
@@ -32,7 +33,7 @@ header {
     font-size: 1em;
 }
 
-header > div.h-empresa {
+header > div.content {
     position: absolute;
 
     left: 50%;
@@ -57,28 +58,70 @@ nav a {
 
 nav a:hover {
     color: var(--color-o);
-    background-color: var(--color-b2);
+    background-color: rgb(255, 255, 255);
     transition-duration: 0.2s;
 }
 
-main {
-    background-color: rgba(255, 255, 255, 0.9);
-    min-width: 260px;
-    max-width: 900px;
-    margin: auto;
+main{
+    font-family: var(--font-p);
 }
 
-main h1 {
-    margin: 10px;
-    padding: 10px;
-    font-family: var(--font-p);
+section.section-01 {
+    background-image: url(../img/background-ferramentas2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    height: 30vh;
+}
+
+section.section-01 h1 {
+    background-color: var(--color-b1);
+    color: var(--color-o);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+section.section-02 {
+    text-align: center;
+    margin: 50px auto;
+}
+
+section.section-02 a {
+    color: white;
+    text-decoration: none;
+}
+
+section.section-02 a:hover {
     color: var(--color-o);
 }
 
-main p {
-    margin: 10px;
-    padding: 10px;
-    font-family: var(--font-p);
+section.section-02 div {
+    display: inline-block;
+    background-color: white;
+    text-align: center;   
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--color-b1);
+}
+
+section.section-02 div:hover {
+    background-color: white;
+    transition-duration: 0.25s;
+}
+
+section div.content {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 footer {
