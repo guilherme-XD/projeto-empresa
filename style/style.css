@@ -115,7 +115,7 @@ section.section-02 div {
 }
 
 section.section-02 div:hover {
-    transform: translate(3px, -3px);
+    transform: translate(6px, -6px);
     background-color: white;
     transition-duration: 0.25s;
     
@@ -135,6 +135,7 @@ section div.content {
 }
 
 footer {
+    text-align: center;
     padding: 10px;
     background-color: black;
     font-family: var(--font-p);
@@ -143,9 +144,19 @@ footer {
 footer p {
     color: white;
     text-align: center;
+    margin: 10px;
 }
 
 footer a {
     text-decoration: none;
     color: var(--color-o);
+}
+
+footer a div {
+    display: inline-block;
+}
+
+footer img {
+    display: inline-block;
+    height: 40px;
 }
