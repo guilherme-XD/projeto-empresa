@@ -108,11 +108,21 @@ section.section-02 div {
     padding: 40px;
     border-radius: 20px;
     background-color: var(--color-b1);
+
+    width: 25%;
+
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 section.section-02 div:hover {
+    transform: translate(3px, -3px);
     background-color: white;
     transition-duration: 0.25s;
+    
+}
+
+section.section-02 div h1{
+    font-size: 100%;
 }
 
 section div.content {
