@@ -72,7 +72,6 @@ section.section-01 {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
-    border: 1px solid black;
     text-align: center;
     margin: 0px;
     padding: 0px;
@@ -159,4 +158,5 @@ footer a div {
 footer img {
     display: inline-block;
     height: 40px;
+    margin: 15px 25px;
 }
