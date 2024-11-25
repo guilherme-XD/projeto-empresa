@@ -146,9 +146,23 @@ footer p {
     margin: 10px;
 }
 
+footer ul {
+    color: white;
+}
+
+footer li {
+    list-style-type: none;
+    margin: 5px;
+}
+
 footer a {
     text-decoration: none;
     color: var(--color-o);
+}
+
+footer a.text:hover {
+    text-decoration: underline;
+    color: var(--color-g);
 }
 
 footer a div {
