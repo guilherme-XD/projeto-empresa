@@ -17,6 +17,27 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerRow {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerColumn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -24,22 +45,12 @@ body {
 }
 
 header {
-    position: relative;
     background-image: linear-gradient(to bottom, var(--color-b0), var(--color-b1));
+    padding: 20px 0px;
     color: white;
-    height: 100px;
     text-align: center;
     font-family: var(--font-h1);
-    font-size: 1em;
-}
-
-header > div.content {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
+    font-size: 2em;
 }
 
 nav {
@@ -47,6 +58,9 @@ nav {
     color: white;
     font-family: var(--font-p);
     padding: 10px;
+
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
@@ -66,71 +80,52 @@ main{
     font-family: var(--font-p);
 }
 
-section.section-01 {
+section.section01 {
     background-image: url(../img/background-ferramentas2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: relative;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-    height: 30vh;
+    height: 400px;
 }
 
-section.section-01 h1 {
+section.section01 h2 {
     background-color: var(--color-b1);
     color: var(--color-o);
     padding: 20px;
     border-radius: 20px;
 }
 
-section.section-02 {
+section.section02 {
+    background-color: var(--color-b2);
+    padding: 20px;
+}
+
+section.section02 div.services {
+    border: 2px solid white;
+    width: 300px;
+    padding: 20px;
     text-align: center;
-    margin: 50px auto;
-}
-
-section.section-02 a {
-    color: white;
-    text-decoration: none;
-}
-
-section.section-02 a:hover {
-    color: var(--color-o);
-}
-
-section.section-02 div {
-    display: inline-block;
-    background-color: white;
-    text-align: center;   
+    background: var(--color-b0);
     margin: 20px;
-    padding: 40px;
     border-radius: 20px;
-    background-color: var(--color-b1);
-
-    width: 25%;
-
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-section.section-02 div:hover {
-    transform: translate(6px, -6px);
-    background-color: white;
-    transition-duration: 0.25s;
-    
+section.section02 div.services:hover {
+    border-color: var(--color-o);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
-section.section-02 div h1{
-    font-size: 100%;
+section.section02 div.services a {
+    text-decoration: none;
+    color: white;
 }
 
-section div.content {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
+section.section02 div.services a:hover {
+    border-color: var(--color-o);
+    color: var(--color-o);
+    transition-duration: 0.2s;
 }
 
 footer {
