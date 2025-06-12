@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
     --color-b0: rgb(0, 37, 75);
@@ -10,14 +10,26 @@
     --color-o: #ffa500;
 
     --font-h1: "Turret Road", sans-serif;
-    --font-p: arial, verdana, helvetica, sans-serif;
+    --font-p: "Open Sans", sans-serif;
 
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-b2);
+    font-family: var(--font-p);
+    color: white;
 }
 
 .container {
@@ -40,13 +52,9 @@
     align-items: center;
 }
 
-body {
-    background-color: var(--color-b2);
-}
-
 header {
     background-image: linear-gradient(to bottom, var(--color-b0), var(--color-b1));
-    padding: 20px 0px;
+    padding: var(--spacing-md) 0;
     color: white;
     text-align: center;
     font-family: var(--font-h1);
@@ -55,12 +63,11 @@ header {
 
 nav {
     background-color: var(--color-b1);
-    color: white;
-    font-family: var(--font-p);
     padding: 10px;
-
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
@@ -68,15 +75,16 @@ nav a {
     border-radius: 10px;
     text-decoration: none;
     color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
     color: var(--color-o);
-    background-color: rgb(255, 255, 255);
-    transition-duration: 0.2s;
+    background-color: var(--color-b0);
 }
 
-main{
+main {
     font-family: var(--font-p);
 }
 
@@ -84,7 +92,7 @@ section.section01 {
     background-image: url(../img/background-ferramentas2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     text-align: center;
     height: 400px;
 }
@@ -92,40 +100,41 @@ section.section01 {
 section.section01 h2 {
     background-color: var(--color-b1);
     color: var(--color-o);
-    padding: 20px;
+    padding: var(--spacing-md);
     border-radius: 20px;
 }
 
 section.section02 {
     background-color: var(--color-b2);
-    padding: 20px;
+    padding: var(--spacing-md);
 }
 
 section.section02 div.services {
     border: 2px solid white;
     width: 300px;
-    padding: 20px;
+    padding: var(--spacing-md);
     text-align: center;
     background: var(--color-b0);
-    margin: 20px;
+    margin: var(--spacing-md);
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 section.section02 div.services:hover {
     border-color: var(--color-o);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    transform: scale(1.05);
 }
 
 section.section02 div.services a {
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 section.section02 div.services a:hover {
-    border-color: var(--color-o);
     color: var(--color-o);
-    transition-duration: 0.2s;
 }
 
 footer {
@@ -136,13 +145,11 @@ footer {
 }
 
 footer p {
-    color: white;
-    text-align: center;
     margin: 10px;
 }
 
 footer ul {
-    color: white;
+    padding: 0;
 }
 
 footer li {
@@ -153,6 +160,7 @@ footer li {
 footer a {
     text-decoration: none;
     color: var(--color-o);
+    transition: all 0.3s ease-in-out;
 }
 
 footer a.text:hover {
@@ -160,12 +168,12 @@ footer a.text:hover {
     color: var(--color-g);
 }
 
-footer a div {
-    display: inline-block;
-}
-
 footer img {
-    display: inline-block;
     height: 40px;
     margin: 15px 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer img:hover {
+    transform: scale(1.1);
 }
